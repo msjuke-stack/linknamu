@@ -1,19 +1,22 @@
 import ProfileHeader from "@/components/ProfileHeader";
-import LinkCard from "@/components/LinkCard";
+import LinkList from "@/components/LinkList";
 import { GithubIcon, BlogIcon, EmailIcon } from "@/components/icons";
 
 const links = [
   {
+    id: "github",
     label: "Github",
     href: "https://github.com/msjuke-stack",
     icon: <GithubIcon className="h-5 w-5" />,
   },
   {
+    id: "blog",
     label: "Blog",
     href: "https://blog.naver.com/knono01/224413488186",
     icon: <BlogIcon className="h-5 w-5" />,
   },
   {
+    id: "email",
     label: "Email",
     href: "mailto:msjuke@gmail.com",
     icon: <EmailIcon className="h-5 w-5" />,
@@ -29,11 +32,7 @@ export default function Home() {
           bio="풀스택 개발자 | 요즘에는 AI 개발에 관심이 많아요"
           imageSrc="/DACC.png"
         />
-        <div className="flex w-full flex-col gap-3.5">
-          {links.map((link) => (
-            <LinkCard key={link.label} {...link} />
-          ))}
-        </div>
+        <LinkList links={links} />
         <span className="text-lg tracking-widest text-[#c9a888] dark:text-[#5a4a3d]">
           ···
         </span>
