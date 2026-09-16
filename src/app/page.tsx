@@ -1,40 +1,40 @@
 import ProfileHeader from "@/components/ProfileHeader";
 import LinkCard from "@/components/LinkCard";
-import { GithubIcon, LinkedinIcon, BlogIcon } from "@/components/icons";
+import { GithubIcon, BlogIcon, EmailIcon } from "@/components/icons";
 
 const links = [
   {
     label: "Github",
-    href: "https://github.com/username",
+    href: "https://github.com/msjuke-stack",
     icon: <GithubIcon className="h-5 w-5" />,
   },
   {
-    label: "LinkedIn",
-    href: "https://linkedin.com/in/username",
-    icon: <LinkedinIcon className="h-5 w-5" />,
+    label: "Blog",
+    href: "https://blog.naver.com/knono01/224413488186",
+    icon: <BlogIcon className="h-5 w-5" />,
   },
   {
-    label: "Blog",
-    href: "https://blog.example.com",
-    icon: <BlogIcon className="h-5 w-5" />,
+    label: "Email",
+    href: "mailto:msjuke@gmail.com",
+    icon: <EmailIcon className="h-5 w-5" />,
   },
 ];
 
 export default function Home() {
   return (
-    <div className="flex flex-1 items-center justify-center bg-zinc-50 px-4 py-10 dark:bg-black">
-      <main className="flex w-full max-w-sm flex-col items-center gap-8 rounded-3xl border border-zinc-200 bg-white px-6 py-10 dark:border-zinc-800 dark:bg-zinc-950">
+    <div className="flex flex-1 items-center justify-center bg-gradient-to-b from-[#fdf6ec] via-[#fbe7d6] to-[#f6d3b8] px-5 py-14 dark:from-[#241b14] dark:via-[#211a15] dark:to-[#181110] sm:px-6">
+      <main className="flex w-full max-w-sm flex-col items-center gap-9 rounded-[2rem] border border-white/60 bg-white/40 px-7 py-12 shadow-[0_20px_50px_-15px_rgba(180,120,70,0.35)] backdrop-blur-xl dark:border-white/10 dark:bg-white/[0.06] sm:px-9 sm:py-14">
         <ProfileHeader
-          name="마성수"
-          bio="세계 최강 바이브코더"
-          imageSrc="/avatar-placeholder.svg"
+          name="MSJUKE"
+          bio="풀스택 개발자 | 요즘에는 AI 개발에 관심이 많아요"
+          imageSrc="/DACC.png"
         />
-        <div className="flex w-full flex-col gap-4">
+        <div className="flex w-full flex-col gap-3.5">
           {links.map((link) => (
             <LinkCard key={link.label} {...link} />
           ))}
         </div>
-        <span className="text-lg tracking-widest text-zinc-300 dark:text-zinc-700">
+        <span className="text-lg tracking-widest text-[#c9a888] dark:text-[#5a4a3d]">
           ···
         </span>
       </main>

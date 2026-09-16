@@ -14,6 +14,23 @@ export function LinkedinIcon({ className }: { className?: string }) {
   );
 }
 
+export function EmailIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <rect x="2.25" y="4.5" width="19.5" height="15" rx="2" />
+      <path d="M3 6.5l9 6.5 9-6.5" />
+    </svg>
+  );
+}
+
 export function BlogIcon({ className }: { className?: string }) {
   return (
     <svg
